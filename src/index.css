@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-sun-500/20 text-slate-900;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300;
+  }
+}
+
+@layer components {
+  .prose h1,
+  .prose h2,
+  .prose h3 {
+    @apply text-slate-900 font-semibold;
+  }
+
+  .prose h1 { @apply text-2xl mb-4; }
+  .prose h2 { @apply text-xl mb-3; }
+  .prose h3 { @apply text-lg mb-2; }
+
+  .prose p {
+    @apply text-slate-600 leading-relaxed mb-4;
+  }
+
+  .prose code {
+    @apply bg-slate-100 px-1.5 py-0.5 rounded text-sun-700 text-sm font-mono;
+  }
+
+  .prose pre {
+    @apply bg-slate-50 border border-slate-200 rounded-xl p-4 mb-4;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply text-slate-600 mb-4 ml-4;
+  }
+
+  .prose li {
+    @apply mb-1;
+  }
+
+  .prose blockquote {
+    @apply border-l-2 border-sun-400 pl-4 italic text-slate-500;
+  }
+
+  .prose strong {
+    @apply text-slate-900 font-semibold;
+  }
+
+  .prose a {
+    @apply text-sun-600 underline decoration-sun-300 hover:decoration-sun-500 transition-colors;
+  }
+}
